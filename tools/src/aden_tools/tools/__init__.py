@@ -72,6 +72,7 @@ from .slack_tool import register_tools as register_slack
 from .ssl_tls_scanner import register_tools as register_ssl_tls_scanner
 from .stripe_tool import register_tools as register_stripe
 from .subdomain_enumerator import register_tools as register_subdomain_enumerator
+from .supabase_tool import register_tools as register_supabase
 from .tech_stack_detector import register_tools as register_tech_stack_detector
 from .telegram_tool import register_tools as register_telegram
 from .time_tool import register_tools as register_time
@@ -157,6 +158,7 @@ def register_all_tools(
     register_risk_scorer(mcp)
     register_stripe(mcp, credentials=credentials)
     register_brevo(mcp, credentials=credentials)
+    register_supabase(mcp, credentials=credentials)
 
     # Postgres tool
     register_postgres(mcp, credentials=credentials)
